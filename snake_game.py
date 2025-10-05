@@ -27,6 +27,15 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_w or event.key == pygame.K_UP:
+                snake[1] -= 1
+            if event.key == pygame.K_s or event.key == pygame.K_DOWN:
+                snake[1] += 1
+            if event.key == pygame.K_d or event.key == pygame.K_RIGHT:
+                snake[0] += 1
+            if event.key == pygame.K_a or event.key == pygame.K_LEFT:
+                snake[0] -= 1
 
     pygame.display.flip()
 
